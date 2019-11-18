@@ -5,6 +5,9 @@ OneTimePad
 Gruba A2
 
 TEA
+32 runde se smatra da je optimalno
+128bit kljuc
+64 bit blokovi
 
 Grupa A3
 
@@ -17,3 +20,6 @@ EIGamal
 Gripa A5
 
 SHA1
+
+
+4. Zadatak
