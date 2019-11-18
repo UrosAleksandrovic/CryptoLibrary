@@ -1,0 +1,19 @@
+Grupa A
+
+OneTimePad
+
+Gruba A2
+
+TEA
+
+Grupa A3
+
+CFB mod
+
+Grupa A4
+
+EIGamal
+
+Gripa A5
+
+SHA1
