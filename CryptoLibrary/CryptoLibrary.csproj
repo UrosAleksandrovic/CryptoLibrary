@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CipherFeedbackMode.cs" />
     <Compile Include="Converter.cs" />
+    <Compile Include="Interfaces\ICipher.cs" />
+    <Compile Include="Interfaces\ICipherMode.cs" />
     <Compile Include="Interfaces\IKeyGenerator.cs" />
-    <Compile Include="Interfaces\IOTPProvider.cs" />
     <Compile Include="KeyGenerator.cs" />
-    <Compile Include="OTPProvider.cs" />
+    <Compile Include="OTPCipher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TEAProvider.cs" />
+    <Compile Include="SHA1Provider.cs" />
+    <Compile Include="TEACipher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

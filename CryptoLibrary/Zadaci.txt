@@ -20,6 +20,13 @@ EIGamal
 Gripa A5
 
 SHA1
+Ulaz je 512 bit blok i njega moram da razbijem na 5 bloka
+Svaki od tih bloka se koristi za jednu rundu.
+Izlaz je od 160 bit blok
 
 
 4. Zadatak
+
+
+
+0xe28e106e54ec7488c81060d85f6c0cb5d7074aeca3377dca578effb2cbb82e97eb7f5f1d0713a0b3660292cd01924fe1bebc7d17c12b88d6acb8945cfd66be10
