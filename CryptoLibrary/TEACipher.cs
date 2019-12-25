@@ -2,7 +2,7 @@
 
 namespace CryptoLibrary
 {
-    public class TEACipher :ICipher
+    public class TEACipher :ICipher,ISymmetricKey
     {
         private enum Action
         {

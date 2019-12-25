@@ -6,10 +6,5 @@
 
         byte[] Decrypt(byte[] EncriptedData);
 
-        byte[] Key
-        {
-            set;
-        }
-
     }
 }

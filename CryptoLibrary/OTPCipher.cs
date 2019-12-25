@@ -2,7 +2,7 @@
 
 namespace CryptoLibrary
 {
-    public class OTPCipher : ICipher
+    public class OTPCipher : ICipher,ISymmetricKey
     {
 
         public OTPCipher() 

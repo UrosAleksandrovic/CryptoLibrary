@@ -1,6 +1,6 @@
 ﻿namespace CryptoLibrary
 {
-    public interface ICipherMode:ICipher
+    public interface ICipherMode:ICipher,ISymmetricKey
     {
         ICipher Cipher
         {

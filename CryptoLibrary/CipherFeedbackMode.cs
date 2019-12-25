@@ -5,6 +5,7 @@ namespace CryptoLibrary
     public class CipherFeedbackMode : ICipherMode
     {
         private byte[] _initializationVector;
+        
         #region Constructors
         public CipherFeedbackMode()
         {
