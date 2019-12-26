@@ -13,7 +13,7 @@ namespace CryptoLibrary
             set=> _key = value;
             internal get
             {
-                if (NeedToGenerateKey())
+                if (!NeedToGenerateKey())
                 {
                     CreateKeyPair(KeySizeValue);
                 }
@@ -125,8 +125,13 @@ namespace CryptoLibrary
             Key.PublicKey[2] = BigInteger.ModPow(Key.PublicKey[1], Key.PrivateKey[0], Key.PublicKey[0]);
         }
 
+        public void SetKey(byte[] Key)
+        {
+            Console.WriteLine("This is Asymetric algorithm");
+        }
 
-        
+
+
         #endregion
 
     }

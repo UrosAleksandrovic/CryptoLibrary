@@ -6,5 +6,6 @@
 
         byte[] Decrypt(byte[] EncriptedData);
 
+        void SetKey(byte[] Key);
     }
 }

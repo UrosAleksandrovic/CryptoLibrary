@@ -2,7 +2,7 @@
 
 namespace CryptoLibrary
 {
-    public class TEACipher :ICipher,ISymmetricKey
+    public class TEACipher : ICipher, ISymmetricKey
     {
         private enum Action
         {
@@ -104,6 +104,11 @@ namespace CryptoLibrary
                 throw new Exception("Cipher key is not set or not compatibale with TEA algorithm.");
             if (DataLength % 8 != 0)
                 throw new Exception("Lenght of data is not compatibale with TEA algorithm.");
+        }
+
+        public void SetKey(byte[] Key)
+        {
+            this.Key = Key;
         }
     }
 }

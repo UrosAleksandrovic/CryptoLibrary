@@ -2,7 +2,7 @@
 
 namespace CryptoLibrary
 {
-    public class OTPCipher : ICipher,ISymmetricKey
+    public class OTPCipher : ICipher, ISymmetricKey
     {
 
         public OTPCipher() 
@@ -32,6 +32,11 @@ namespace CryptoLibrary
         }
 
         public byte[] Decrypt(byte[] EncriptedData) => this.Encrypt(EncriptedData);
+
+        public void SetKey(byte[] Key)
+        {
+            this.Key = Key;
+        }
 
         #endregion
     }

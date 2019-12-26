@@ -2,10 +2,12 @@
 
 namespace CryptoLibrary
 {
-    public class CipherFeedbackMode : ICipherMode
+    public class CipherFeedbackMode : ICipherMode, ISymmetricKey
     {
         private byte[] _initializationVector;
         
+
+
         #region Constructors
         public CipherFeedbackMode()
         {
@@ -64,7 +66,7 @@ namespace CryptoLibrary
             if (Cipher == null)
                 throw new Exception("Cipher is not set!");
 
-            Cipher.Key = Key;
+            Cipher.SetKey(Key);
             byte[] EncriptedData = new byte[DataToEncript.Length];
             byte[] Vector = InitializationVector;
             for(int i = 0; i < (DataToEncript.Length) / DataBlockSize; i++)
@@ -89,7 +91,7 @@ namespace CryptoLibrary
             if (Cipher == null)
                 throw new Exception("Cipher is not set!");
 
-            Cipher.Key = Key;
+            Cipher.SetKey(Key);
             byte[] DecriptedData = new byte[EncriptedData.Length];
             byte[] Vector = InitializationVector;
             for (int i = 0; i < (EncriptedData.Length) / DataBlockSize; i++)
@@ -127,6 +129,13 @@ namespace CryptoLibrary
 
             ICipher OTP = new OTPCipher(SingleBlock);
             return OTP.Encrypt(Temp);
+        }
+
+        public void SetKey(byte[] Key)
+        {
+            this.Key = Key;
+            if (Cipher != null)
+                this.Cipher.SetKey(Key);
         }
     }
 }

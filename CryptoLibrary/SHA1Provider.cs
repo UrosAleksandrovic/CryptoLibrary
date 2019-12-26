@@ -26,8 +26,6 @@ namespace CryptoLibrary
             H[4] = 0xC3D2E1F0;
         }
 
-
-        //Nadji brzi nacin za konkatenaciju ima na netu
         private static byte[] AppendH()
         {
             byte[] ResaultBlock = new byte[20];
@@ -41,8 +39,7 @@ namespace CryptoLibrary
             }
             return ResaultBlock;
         }
-        
-        //Nadji bolji nacin za kopiranje dva byte arraya
+
         public static byte[] Hash(byte[] Data)
         {
             if(Data.Length%64 != 0)
@@ -122,7 +119,6 @@ namespace CryptoLibrary
             byte[] PreprocessedData = new byte[DataBlock.Length + BytesToAdd];
             if (BytesToAdd == 0)
             {
-                //Pogledaj i ovde najbrzi nacin za kopiranje
                 Array.Copy(DataBlock, PreprocessedData, PreprocessedData.Length);
             }
             else
@@ -142,7 +138,6 @@ namespace CryptoLibrary
             return PreprocessedData;
         }
 
-        //Sta je ovo?
         private static byte getByte(uint x, int n)
         {
             return (byte)((x >> 8 * n) & 0xFF);
